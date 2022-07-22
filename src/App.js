@@ -2,12 +2,24 @@
 import Filter from './components/Organisms/Filter/Filter';
 
 function App() {
+  const [food, setFood] = useState(["Burger", "Pizza", "Sandwich"]);
+  
   return (
     <div className="App">
-      <h1>app</h1>
-      <Filter></Filter>
+      <Multiselect
+        isObject={false}
+        onRemove={(event) => {
+          console.log(event);
+        }}
+        onSelect={(event) => {
+          console.log(event);
+        }}
+        options={food}
+        selectedValues={["Burger"]}
+        showCheckbox
+      />
     </div>
-  );
+  )
 }
 
 export default App;
