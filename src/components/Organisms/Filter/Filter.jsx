@@ -20,7 +20,9 @@ function Filter(){
         .catch((err) => {console.log(err)});
     }, []);
 
-    
+    // notes={notes.filter((note) =>
+    //   note.text.toLowerCase().includes(searchText)
+    // )}
 
     return(
         <>
@@ -42,6 +44,7 @@ function Filter(){
           <option value="All">장소별</option>
           <option value="Car">자동차</option>
           <option value="Cafe">카페</option>
+          <option value="Cafe">화장실</option>
         </Form.Select>
 
         <div className="grid">
